@@ -1,5 +1,6 @@
 import { Battery, Shield, Zap, Gauge, Cpu, TrendingUp } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
+import { motion } from "framer-motion";
 
 export const Features = () => {
   const features = [
@@ -56,7 +57,14 @@ export const Features = () => {
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {features.map((feature, index) => (
-            <Card
+            <motion.div
+              key={index}
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: index * 0.1 }}
+            >
+              <Card
               key={index}
               className="group hover:border-primary/50 transition-all duration-300 hover:shadow-[0_0_30px_hsl(var(--primary)/0.1)] bg-card/50 backdrop-blur"
             >
@@ -70,6 +78,7 @@ export const Features = () => {
                 </p>
               </CardContent>
             </Card>
+            </motion.div>
           ))}
         </div>
       </div>

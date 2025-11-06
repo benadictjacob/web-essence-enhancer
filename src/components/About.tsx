@@ -1,5 +1,6 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Target, Users, Award, Lightbulb } from "lucide-react";
+import { motion } from "framer-motion";
 
 export const About = () => {
   const values = [
@@ -51,8 +52,14 @@ export const About = () => {
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
           {values.map((value, index) => (
-            <Card
+            <motion.div
               key={index}
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: index * 0.1 }}
+            >
+              <Card
               className="group hover:border-primary/50 transition-all duration-300 hover:shadow-[0_0_30px_hsl(var(--primary)/0.1)] bg-card/50 backdrop-blur"
             >
               <CardContent className="p-8 space-y-4">
@@ -65,10 +72,17 @@ export const About = () => {
                 </p>
               </CardContent>
             </Card>
+            </motion.div>
           ))}
         </div>
 
-        <div className="mt-16 max-w-4xl mx-auto">
+        <motion.div 
+          className="mt-16 max-w-4xl mx-auto"
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+        >
           <Card className="bg-primary/5 border-primary/20">
             <CardContent className="p-8 sm:p-12 text-center space-y-4">
               <h3 className="text-2xl sm:text-3xl font-bold">
@@ -90,7 +104,7 @@ export const About = () => {
               </div>
             </CardContent>
           </Card>
-        </div>
+        </motion.div>
       </div>
     </section>
   );

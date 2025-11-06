@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 import heroBms from "@/assets/hero-bms.jpg";
+import { motion } from "framer-motion";
 
 export const Hero = () => {
   const scrollToSection = (id: string) => {
@@ -13,7 +14,12 @@ export const Hero = () => {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-20">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Text Content */}
-          <div className="space-y-8 animate-fade-in">
+          <motion.div 
+            className="space-y-8"
+            initial={{ opacity: 0, x: -50 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.8 }}
+          >
             <div className="space-y-2">
               <p className="text-primary text-sm font-semibold tracking-wide uppercase">
                 We Do
@@ -44,10 +50,15 @@ export const Hero = () => {
                 Contact Us
               </Button>
             </div>
-          </div>
+          </motion.div>
 
           {/* Hero Image */}
-          <div className="relative animate-slide-up">
+          <motion.div 
+            className="relative"
+            initial={{ opacity: 0, x: 50 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.8, delay: 0.2 }}
+          >
             <div className="relative rounded-2xl overflow-hidden shadow-2xl">
               <img
                 src={heroBms}
@@ -58,13 +69,18 @@ export const Hero = () => {
             </div>
             
             {/* Floating Card */}
-            <div className="absolute -bottom-6 -left-6 bg-card border border-border rounded-xl p-6 shadow-2xl max-w-xs hidden lg:block">
+            <motion.div 
+              className="absolute -bottom-6 -left-6 bg-card border border-border rounded-xl p-6 shadow-2xl max-w-xs hidden lg:block"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.6 }}
+            >
               <p className="text-4xl font-bold text-primary mb-2">99.5%</p>
               <p className="text-sm text-muted-foreground">
                 Battery efficiency with our advanced BMS technology
               </p>
-            </div>
-          </div>
+            </motion.div>
+          </motion.div>
         </div>
       </div>
     </section>

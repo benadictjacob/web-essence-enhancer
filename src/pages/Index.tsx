@@ -6,6 +6,7 @@ import { Products } from "@/components/Products";
 import { About } from "@/components/About";
 import { Contact } from "@/components/Contact";
 import { Footer } from "@/components/Footer";
+import { ScrollToTop } from "@/components/ScrollToTop";
 
 const Index = () => {
   return (
@@ -18,6 +19,7 @@ const Index = () => {
       <About />
       <Contact />
       <Footer />
+      <ScrollToTop />
     </div>
   );
 };

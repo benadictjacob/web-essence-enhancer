@@ -1,6 +1,7 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Bike, Car, Truck, Bus } from "lucide-react";
+import { motion } from "framer-motion";
 
 export const Products = () => {
   const products = [
@@ -82,8 +83,15 @@ export const Products = () => {
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-12">
           {products.map((product, index) => (
-            <Card
+            <motion.div
               key={index}
+              initial={{ opacity: 0, scale: 0.95 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: index * 0.1 }}
+              whileHover={{ scale: 1.02 }}
+            >
+              <Card
               className="group hover:border-primary/50 transition-all duration-300 hover:shadow-[0_0_30px_hsl(var(--primary)/0.1)] bg-card"
             >
               <CardHeader>
@@ -129,6 +137,7 @@ export const Products = () => {
                 </div>
               </CardContent>
             </Card>
+            </motion.div>
           ))}
         </div>
 

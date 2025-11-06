@@ -1,3 +1,5 @@
+import { motion } from "framer-motion";
+
 export const Partners = () => {
   const partners = [
     "The ePlane Company",
@@ -18,35 +20,61 @@ export const Partners = () => {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         {/* Partners Section */}
         <div className="text-center mb-16">
-          <h2 className="text-3xl sm:text-4xl font-bold mb-12">Our Proud Partners</h2>
+          <motion.h2 
+            className="text-3xl sm:text-4xl font-bold mb-12"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+          >
+            Our Proud Partners
+          </motion.h2>
           <div className="flex flex-wrap items-center justify-center gap-8 sm:gap-12">
             {partners.map((partner, index) => (
-              <div
+              <motion.div
                 key={index}
                 className="text-xl sm:text-2xl font-semibold text-muted-foreground hover:text-foreground transition-colors duration-300 cursor-pointer"
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.4, delay: index * 0.1 }}
+                whileHover={{ scale: 1.1 }}
               >
                 {partner}
-              </div>
+              </motion.div>
             ))}
           </div>
         </div>
 
         {/* Supporters Section */}
         <div className="text-center pt-12 border-t border-border">
-          <h3 className="text-2xl sm:text-3xl font-bold mb-12">Supported By</h3>
+          <motion.h3 
+            className="text-2xl sm:text-3xl font-bold mb-12"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+          >
+            Supported By
+          </motion.h3>
           <div className="flex flex-wrap items-center justify-center gap-8 sm:gap-16">
             {supporters.map((supporter, index) => (
-              <div
+              <motion.div
                 key={index}
-                className="group text-center space-y-2 hover:scale-105 transition-transform duration-300 cursor-pointer"
+                className="text-center space-y-2 cursor-pointer"
+                initial={{ opacity: 0, scale: 0.9 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.4, delay: index * 0.1 }}
+                whileHover={{ scale: 1.05 }}
               >
                 <p className="text-xs text-primary font-semibold uppercase tracking-wider">
                   {supporter.tagline}
                 </p>
-                <p className="text-lg sm:text-xl font-bold text-muted-foreground group-hover:text-foreground transition-colors">
+                <p className="text-lg sm:text-xl font-bold text-muted-foreground hover:text-foreground transition-colors">
                   {supporter.name}
                 </p>
-              </div>
+              </motion.div>
             ))}
           </div>
         </div>

@@ -5,6 +5,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Mail, Phone, MapPin, Send } from "lucide-react";
 import { useState } from "react";
 import { useToast } from "@/hooks/use-toast";
+import { motion } from "framer-motion";
 
 export const Contact = () => {
   const { toast } = useToast();
@@ -67,7 +68,13 @@ export const Contact = () => {
 
         <div className="grid lg:grid-cols-2 gap-12 max-w-6xl mx-auto">
           {/* Contact Form */}
-          <Card className="bg-card">
+          <motion.div
+            initial={{ opacity: 0, x: -30 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+          >
+            <Card className="bg-card">
             <CardContent className="p-8">
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div>
@@ -143,9 +150,16 @@ export const Contact = () => {
               </form>
             </CardContent>
           </Card>
+          </motion.div>
 
           {/* Contact Information */}
-          <div className="space-y-8">
+          <motion.div 
+            className="space-y-8"
+            initial={{ opacity: 0, x: 30 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+          >
             <Card className="bg-card">
               <CardContent className="p-8 space-y-6">
                 <h3 className="text-2xl font-bold mb-6">Contact Information</h3>
@@ -186,7 +200,7 @@ export const Contact = () => {
                 </div>
               </CardContent>
             </Card>
-          </div>
+          </motion.div>
         </div>
       </div>
     </section>
