@@ -21,12 +21,12 @@ export const Hero = () => {
             transition={{ duration: 0.8 }}
           >
             <div className="space-y-2">
-              <p className="text-primary text-sm font-semibold tracking-wide uppercase">
+              <p className="text-sm font-semibold tracking-wide uppercase bg-gradient-to-r from-primary via-secondary to-accent bg-clip-text text-transparent">
                 We Do
               </p>
               <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold leading-tight text-balance">
                 Cutting-edge Battery Management System for{" "}
-                <span className="text-primary">E-Mobility</span>
+                <span className="bg-gradient-to-r from-primary via-secondary to-accent bg-clip-text text-transparent">E-Mobility</span>
               </h1>
             </div>
 
@@ -38,7 +38,7 @@ export const Hero = () => {
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 pt-4">
-              <Button size="lg" onClick={() => scrollToSection("about")}>
+              <Button size="lg" variant="electric" onClick={() => scrollToSection("about")}>
                 Know More
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Button>
@@ -70,12 +70,12 @@ export const Hero = () => {
             
             {/* Floating Card */}
             <motion.div 
-              className="absolute -bottom-6 -left-6 bg-card border border-border rounded-xl p-6 shadow-2xl max-w-xs hidden lg:block"
+              className="absolute -bottom-6 -left-6 rounded-xl p-6 shadow-2xl max-w-xs hidden lg:block border-0 card-hover"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.6 }}
             >
-              <p className="text-4xl font-bold text-primary mb-2">99.5%</p>
+              <p className="text-4xl font-bold bg-gradient-to-r from-primary via-secondary to-accent bg-clip-text text-transparent mb-2">99.5%</p>
               <p className="text-sm text-muted-foreground">
                 Battery efficiency with our advanced BMS technology
               </p>

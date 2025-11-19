@@ -80,7 +80,7 @@ export const Contact = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            <Card className="card-hover bg-card border-primary/20">
+            <Card className="card-hover border-0">
             <CardContent className="p-8">
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div>
@@ -166,21 +166,21 @@ export const Contact = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            <Card className="card-hover bg-gradient-to-br from-card via-card to-primary/5 border-primary/20">
+            <Card className="card-hover border-0">
               <CardContent className="p-8 space-y-6">
                 <h3 className="text-2xl font-bold mb-6">Contact Information</h3>
                 {contactInfo.map((info, index) => (
                   <motion.a
                     key={index}
                     href={info.href}
-                    className="flex items-start gap-4 group hover:bg-secondary/50 p-4 -m-4 rounded-lg transition-all duration-300 border border-transparent hover:border-primary/30 hover:shadow-[0_0_15px_hsl(var(--primary)/0.15)]"
+                    className="flex items-start gap-4 group p-4 -m-4 rounded-lg transition-all duration-500 bg-gradient-to-r from-transparent via-transparent to-transparent hover:from-primary/10 hover:via-secondary/10 hover:to-accent/10 hover:shadow-[0_0_25px_hsl(var(--primary)/0.3)]"
                     initial={{ opacity: 0, x: 20 }}
                     whileInView={{ opacity: 1, x: 0 }}
                     viewport={{ once: true }}
                     transition={{ duration: 0.4, delay: index * 0.1 }}
                   >
-                    <div className="w-12 h-12 rounded-lg bg-gradient-to-br from-primary/10 to-secondary/10 flex items-center justify-center group-hover:from-primary/20 group-hover:to-secondary/20 transition-all duration-300 flex-shrink-0 group-hover:scale-110">
-                      <info.icon className="w-6 h-6 text-primary group-hover:text-secondary transition-colors duration-300" />
+                    <div className="w-12 h-12 rounded-lg bg-gradient-to-br from-primary via-secondary to-accent flex items-center justify-center transition-all duration-500 flex-shrink-0 group-hover:scale-110 group-hover:rotate-12 group-hover:from-accent group-hover:via-primary group-hover:to-secondary shadow-lg group-hover:shadow-[0_0_30px_hsl(var(--secondary)/0.5)]">
+                      <info.icon className="w-6 h-6 text-primary-foreground" />
                     </div>
                     <div>
                       <p className="text-sm text-muted-foreground mb-1">{info.label}</p>
@@ -191,7 +191,7 @@ export const Contact = () => {
               </CardContent>
             </Card>
 
-            <Card className="card-hover bg-gradient-to-br from-primary/5 via-secondary/5 to-accent/5 border-primary/30">
+            <Card className="card-hover border-0">
               <CardContent className="p-8 space-y-4">
                 <h3 className="text-xl font-bold">Business Hours</h3>
                 <div className="space-y-2 text-sm">
