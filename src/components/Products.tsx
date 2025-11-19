@@ -71,7 +71,13 @@ export const Products = () => {
   return (
     <section id="products" className="py-24 bg-secondary/20">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16 space-y-4">
+        <motion.div 
+          className="text-center mb-16 space-y-4"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+        >
           <h2 className="text-4xl sm:text-5xl font-bold">
             Products & <span className="text-primary">Solutions</span>
           </h2>
@@ -79,7 +85,7 @@ export const Products = () => {
             Tailored Battery Management Systems for every electric vehicle segment,
             from two-wheelers to heavy commercial vehicles
           </p>
-        </div>
+        </motion.div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-12">
           {products.map((product, index) => (
@@ -89,63 +95,70 @@ export const Products = () => {
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
-              whileHover={{ scale: 1.02 }}
             >
               <Card
-              className="group hover:border-primary/50 transition-all duration-300 hover:shadow-[0_0_30px_hsl(var(--primary)/0.1)] bg-card"
+              className="card-hover group border-primary/20 bg-card h-full relative overflow-hidden"
             >
-              <CardHeader>
+              <div className="absolute inset-0 bg-gradient-to-br from-electric-blue/5 via-transparent to-neon-purple/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+              <CardHeader className="relative z-10">
                 <div className="flex items-center gap-4 mb-4">
-                  <div className="w-16 h-16 rounded-xl bg-primary/10 flex items-center justify-center group-hover:bg-primary/20 transition-colors duration-300">
-                    <product.icon className="w-8 h-8 text-primary" />
+                  <div className="w-16 h-16 rounded-xl bg-gradient-to-br from-primary/10 to-secondary/10 flex items-center justify-center group-hover:from-primary/20 group-hover:to-secondary/20 transition-all duration-300 group-hover:scale-110 group-hover:rotate-6">
+                    <product.icon className="w-8 h-8 text-primary group-hover:text-secondary transition-colors duration-300" />
                   </div>
                   <div>
-                    <p className="text-xs text-primary font-semibold uppercase tracking-wider mb-1">
+                    <p className="text-xs text-primary font-semibold uppercase tracking-wider mb-1 group-hover:text-secondary transition-colors duration-300">
                       {product.category}
                     </p>
                     <CardTitle className="text-xl">{product.title}</CardTitle>
                   </div>
                 </div>
-                <div className="grid grid-cols-3 gap-4 pt-4 border-t border-border">
+                <div className="grid grid-cols-3 gap-4 pt-4 border-t border-border group-hover:border-primary/30 transition-colors duration-300">
                   <div>
                     <p className="text-xs text-muted-foreground mb-1">Voltage</p>
-                    <p className="text-sm font-semibold">{product.voltage}</p>
+                    <p className="font-semibold text-foreground">{product.voltage}</p>
                   </div>
                   <div>
-                    <p className="text-xs text-muted-foreground mb-1">Configuration</p>
-                    <p className="text-sm font-semibold">{product.cells}</p>
+                    <p className="text-xs text-muted-foreground mb-1">Cells</p>
+                    <p className="font-semibold text-foreground">{product.cells}</p>
                   </div>
                   <div>
                     <p className="text-xs text-muted-foreground mb-1">Current</p>
-                    <p className="text-sm font-semibold">{product.current}</p>
+                    <p className="font-semibold text-foreground">{product.current}</p>
                   </div>
                 </div>
               </CardHeader>
-              <CardContent>
-                <div className="space-y-2">
-                  <p className="text-sm font-semibold text-muted-foreground mb-3">
-                    Key Features:
-                  </p>
-                  <ul className="space-y-2">
-                    {product.features.map((feature, idx) => (
-                      <li key={idx} className="flex items-center text-sm text-muted-foreground">
-                        <span className="w-1.5 h-1.5 rounded-full bg-primary mr-3" />
-                        {feature}
-                      </li>
-                    ))}
-                  </ul>
-                </div>
+              <CardContent className="relative z-10">
+                <h4 className="font-semibold mb-3 text-primary">Key Features:</h4>
+                <ul className="space-y-2">
+                  {product.features.map((feature, idx) => (
+                    <li key={idx} className="flex items-center gap-2 text-sm group-hover:translate-x-1 transition-transform duration-300">
+                      <div className="w-1.5 h-1.5 rounded-full bg-primary group-hover:bg-secondary transition-colors duration-300" />
+                      <span className="text-muted-foreground">{feature}</span>
+                    </li>
+                  ))}
+                </ul>
               </CardContent>
             </Card>
             </motion.div>
           ))}
         </div>
 
-        <div className="text-center">
-          <Button size="lg" onClick={scrollToContact}>
+        <motion.div 
+          className="text-center"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+        >
+          <Button
+            onClick={scrollToContact}
+            size="lg"
+            variant="electric"
+            className="px-12"
+          >
             Request a Quote
           </Button>
-        </div>
+        </motion.div>
       </div>
     </section>
   );
