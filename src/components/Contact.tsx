@@ -56,7 +56,13 @@ export const Contact = () => {
   return (
     <section id="contact" className="py-24 bg-secondary/20">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16 space-y-4">
+        <motion.div 
+          className="text-center mb-16 space-y-4"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+        >
           <h2 className="text-4xl sm:text-5xl font-bold">
             Get in <span className="text-primary">Touch</span>
           </h2>
@@ -64,7 +70,7 @@ export const Contact = () => {
             Ready to power your electric vehicle with cutting-edge BMS technology?
             Contact us today for a consultation or quote.
           </p>
-        </div>
+        </motion.div>
 
         <div className="grid lg:grid-cols-2 gap-12 max-w-6xl mx-auto">
           {/* Contact Form */}
@@ -74,7 +80,7 @@ export const Contact = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            <Card className="bg-card">
+            <Card className="card-hover bg-card border-primary/20">
             <CardContent className="p-8">
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div>
@@ -160,43 +166,65 @@ export const Contact = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            <Card className="bg-card">
+            <Card className="card-hover bg-gradient-to-br from-card via-card to-primary/5 border-primary/20">
               <CardContent className="p-8 space-y-6">
                 <h3 className="text-2xl font-bold mb-6">Contact Information</h3>
                 {contactInfo.map((info, index) => (
-                  <a
+                  <motion.a
                     key={index}
                     href={info.href}
-                    className="flex items-start gap-4 group hover:bg-secondary/50 p-4 -m-4 rounded-lg transition-colors duration-300"
+                    className="flex items-start gap-4 group hover:bg-secondary/50 p-4 -m-4 rounded-lg transition-all duration-300 border border-transparent hover:border-primary/30 hover:shadow-[0_0_15px_hsl(var(--primary)/0.15)]"
+                    initial={{ opacity: 0, x: 20 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.4, delay: index * 0.1 }}
                   >
-                    <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center group-hover:bg-primary/20 transition-colors duration-300 flex-shrink-0">
-                      <info.icon className="w-6 h-6 text-primary" />
+                    <div className="w-12 h-12 rounded-lg bg-gradient-to-br from-primary/10 to-secondary/10 flex items-center justify-center group-hover:from-primary/20 group-hover:to-secondary/20 transition-all duration-300 flex-shrink-0 group-hover:scale-110">
+                      <info.icon className="w-6 h-6 text-primary group-hover:text-secondary transition-colors duration-300" />
                     </div>
                     <div>
                       <p className="text-sm text-muted-foreground mb-1">{info.label}</p>
-                      <p className="font-medium">{info.value}</p>
+                      <p className="font-medium group-hover:text-primary transition-colors duration-300">{info.value}</p>
                     </div>
-                  </a>
+                  </motion.a>
                 ))}
               </CardContent>
             </Card>
 
-            <Card className="bg-primary/5 border-primary/20">
+            <Card className="card-hover bg-gradient-to-br from-primary/5 via-secondary/5 to-accent/5 border-primary/30">
               <CardContent className="p-8 space-y-4">
                 <h3 className="text-xl font-bold">Business Hours</h3>
                 <div className="space-y-2 text-sm">
-                  <div className="flex justify-between">
+                  <motion.div 
+                    className="flex justify-between p-2 rounded hover:bg-primary/5 transition-colors duration-300"
+                    initial={{ opacity: 0, y: 10 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.4, delay: 0.1 }}
+                  >
                     <span className="text-muted-foreground">Monday - Friday</span>
                     <span className="font-medium">9:00 AM - 6:00 PM</span>
-                  </div>
-                  <div className="flex justify-between">
+                  </motion.div>
+                  <motion.div 
+                    className="flex justify-between p-2 rounded hover:bg-primary/5 transition-colors duration-300"
+                    initial={{ opacity: 0, y: 10 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.4, delay: 0.2 }}
+                  >
                     <span className="text-muted-foreground">Saturday</span>
                     <span className="font-medium">10:00 AM - 4:00 PM</span>
-                  </div>
-                  <div className="flex justify-between">
+                  </motion.div>
+                  <motion.div 
+                    className="flex justify-between p-2 rounded hover:bg-primary/5 transition-colors duration-300"
+                    initial={{ opacity: 0, y: 10 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.4, delay: 0.3 }}
+                  >
                     <span className="text-muted-foreground">Sunday</span>
                     <span className="font-medium">Closed</span>
-                  </div>
+                  </motion.div>
                 </div>
               </CardContent>
             </Card>
