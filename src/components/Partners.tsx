@@ -21,7 +21,7 @@ export const Partners = () => {
         {/* Partners Section */}
         <div className="text-center mb-16">
           <motion.h2 
-            className="text-3xl sm:text-4xl font-bold mb-12"
+            className="text-3xl sm:text-4xl font-bold mb-12 bg-gradient-to-r from-primary via-secondary to-accent bg-clip-text text-transparent"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -33,7 +33,7 @@ export const Partners = () => {
             {partners.map((partner, index) => (
               <motion.div
                 key={index}
-                className="text-xl sm:text-2xl font-semibold text-muted-foreground hover:text-foreground transition-colors duration-300 cursor-pointer"
+                className="text-xl sm:text-2xl font-semibold text-muted-foreground hover:bg-gradient-to-r hover:from-primary hover:via-secondary hover:to-accent hover:bg-clip-text hover:text-transparent transition-all duration-500 cursor-pointer"
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
@@ -49,7 +49,7 @@ export const Partners = () => {
         {/* Supporters Section */}
         <div className="text-center pt-12 border-t border-border">
           <motion.h3 
-            className="text-2xl sm:text-3xl font-bold mb-12"
+            className="text-2xl sm:text-3xl font-bold mb-12 bg-gradient-to-r from-secondary via-accent to-primary bg-clip-text text-transparent"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -61,17 +61,17 @@ export const Partners = () => {
             {supporters.map((supporter, index) => (
               <motion.div
                 key={index}
-                className="text-center space-y-2 cursor-pointer"
+                className="text-center space-y-2 cursor-pointer group"
                 initial={{ opacity: 0, scale: 0.9 }}
                 whileInView={{ opacity: 1, scale: 1 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.4, delay: index * 0.1 }}
                 whileHover={{ scale: 1.05 }}
               >
-                <p className="text-xs text-primary font-semibold uppercase tracking-wider">
+                <p className="text-xs font-semibold uppercase tracking-wider bg-gradient-to-r from-primary via-secondary to-accent bg-clip-text text-transparent">
                   {supporter.tagline}
                 </p>
-                <p className="text-lg sm:text-xl font-bold text-muted-foreground hover:text-foreground transition-colors">
+                <p className="text-lg sm:text-xl font-bold text-muted-foreground group-hover:bg-gradient-to-r group-hover:from-accent group-hover:via-primary group-hover:to-secondary group-hover:bg-clip-text group-hover:text-transparent transition-all duration-500">
                   {supporter.name}
                 </p>
               </motion.div>

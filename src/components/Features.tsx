@@ -71,14 +71,13 @@ export const Features = () => {
               transition={{ duration: 0.5, delay: index * 0.1 }}
             >
               <Card
-              className="card-hover group border-primary/20 bg-card/50 backdrop-blur h-full relative overflow-hidden"
+              className="card-hover group border-0 h-full relative overflow-hidden"
             >
-              <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-secondary/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
               <CardContent className="p-8 space-y-4 relative z-10">
-                <div className="w-14 h-14 rounded-lg bg-gradient-to-br from-primary/10 to-secondary/10 flex items-center justify-center group-hover:from-primary/20 group-hover:to-secondary/20 transition-all duration-300 group-hover:scale-110">
-                  <feature.icon className="w-7 h-7 text-primary group-hover:text-secondary transition-colors duration-300" />
+                <div className="w-14 h-14 rounded-lg bg-gradient-to-br from-primary via-secondary to-accent flex items-center justify-center transition-all duration-500 group-hover:scale-110 group-hover:rotate-12 group-hover:from-accent group-hover:via-primary group-hover:to-secondary shadow-lg group-hover:shadow-[0_0_30px_hsl(var(--primary)/0.5)]">
+                  <feature.icon className="w-7 h-7 text-primary-foreground" />
                 </div>
-                <h3 className="text-xl font-bold group-hover:text-primary transition-colors duration-300">{feature.title}</h3>
+                <h3 className="text-xl font-bold bg-gradient-to-r from-foreground to-foreground group-hover:from-primary group-hover:via-secondary group-hover:to-accent bg-clip-text group-hover:text-transparent transition-all duration-500">{feature.title}</h3>
                 <p className="text-muted-foreground leading-relaxed">
                   {feature.description}
                 </p>

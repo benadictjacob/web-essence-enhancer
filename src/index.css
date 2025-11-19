@@ -51,6 +51,11 @@ All colors MUST be HSL.
     --gradient-eco: linear-gradient(135deg, hsl(142 76% 55%) 0%, hsl(180 100% 45%) 100%);
     --gradient-accent: linear-gradient(135deg, hsl(280 80% 60%) 0%, hsl(195 100% 50%) 100%);
     --gradient-hero: linear-gradient(135deg, hsl(220 40% 6%) 0%, hsl(195 100% 20%) 50%, hsl(142 76% 20%) 100%);
+    --gradient-primary: linear-gradient(135deg, hsl(142 76% 55%) 0%, hsl(180 100% 45%) 50%, hsl(195 100% 50%) 100%);
+    --gradient-secondary: linear-gradient(135deg, hsl(195 100% 50%) 0%, hsl(142 76% 55%) 50%, hsl(280 80% 60%) 100%);
+    --gradient-hover: linear-gradient(135deg, hsl(280 80% 60%) 0%, hsl(195 100% 50%) 50%, hsl(142 76% 55%) 100%);
+    --gradient-card: linear-gradient(135deg, hsl(220 35% 10%) 0%, hsl(195 100% 15%) 50%, hsl(142 76% 15%) 100%);
+    --gradient-card-hover: linear-gradient(135deg, hsl(142 76% 20%) 0%, hsl(195 100% 20%) 50%, hsl(280 80% 20%) 100%);
     
     --shadow-glow-green: 0 0 60px hsl(142 76% 55% / 0.4);
     --shadow-glow-blue: 0 0 60px hsl(195 100% 50% / 0.4);
@@ -127,11 +132,41 @@ All colors MUST be HSL.
   
   .card-hover {
     transition: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    background: var(--gradient-card);
+    background-size: 200% 200%;
+    background-position: 0% 50%;
   }
   
   .card-hover:hover {
     transform: translateY(-8px) scale(1.02);
-    box-shadow: 0 20px 60px -15px hsl(var(--primary) / 0.4),
-                0 0 40px hsl(var(--primary) / 0.2);
+    box-shadow: 0 20px 60px -15px hsl(var(--primary) / 0.5),
+                0 0 50px hsl(var(--secondary) / 0.3),
+                0 0 80px hsl(var(--accent) / 0.2);
+    background: var(--gradient-card-hover);
+    background-position: 100% 50%;
+  }
+  
+  .gradient-border {
+    position: relative;
+    border: 2px solid transparent;
+    background-clip: padding-box;
+  }
+  
+  .gradient-border::before {
+    content: '';
+    position: absolute;
+    inset: -2px;
+    border-radius: inherit;
+    padding: 2px;
+    background: var(--gradient-primary);
+    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+  
+  .gradient-border:hover::before {
+    opacity: 1;
   }
 }

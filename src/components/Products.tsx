@@ -97,22 +97,21 @@ export const Products = () => {
               transition={{ duration: 0.5, delay: index * 0.1 }}
             >
               <Card
-              className="card-hover group border-primary/20 bg-card h-full relative overflow-hidden"
+              className="card-hover group border-0 h-full relative overflow-hidden"
             >
-              <div className="absolute inset-0 bg-gradient-to-br from-electric-blue/5 via-transparent to-neon-purple/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
               <CardHeader className="relative z-10">
                 <div className="flex items-center gap-4 mb-4">
-                  <div className="w-16 h-16 rounded-xl bg-gradient-to-br from-primary/10 to-secondary/10 flex items-center justify-center group-hover:from-primary/20 group-hover:to-secondary/20 transition-all duration-300 group-hover:scale-110 group-hover:rotate-6">
-                    <product.icon className="w-8 h-8 text-primary group-hover:text-secondary transition-colors duration-300" />
+                  <div className="w-16 h-16 rounded-xl bg-gradient-to-br from-primary via-secondary to-accent flex items-center justify-center transition-all duration-500 group-hover:scale-110 group-hover:rotate-12 group-hover:from-accent group-hover:via-electric-cyan group-hover:to-neon-purple shadow-lg group-hover:shadow-[0_0_40px_hsl(var(--primary)/0.6)]">
+                    <product.icon className="w-8 h-8 text-primary-foreground" />
                   </div>
                   <div>
-                    <p className="text-xs text-primary font-semibold uppercase tracking-wider mb-1 group-hover:text-secondary transition-colors duration-300">
+                    <p className="text-xs font-semibold uppercase tracking-wider mb-1 bg-gradient-to-r from-primary via-secondary to-accent bg-clip-text text-transparent">
                       {product.category}
                     </p>
                     <CardTitle className="text-xl">{product.title}</CardTitle>
                   </div>
                 </div>
-                <div className="grid grid-cols-3 gap-4 pt-4 border-t border-border group-hover:border-primary/30 transition-colors duration-300">
+                <div className="grid grid-cols-3 gap-4 pt-4 border-t border-primary/30 group-hover:border-transparent group-hover:bg-gradient-to-r group-hover:from-primary/10 group-hover:via-secondary/10 group-hover:to-accent/10 rounded-lg transition-all duration-500 p-2 -m-2">
                   <div>
                     <p className="text-xs text-muted-foreground mb-1">Voltage</p>
                     <p className="font-semibold text-foreground">{product.voltage}</p>
@@ -128,12 +127,12 @@ export const Products = () => {
                 </div>
               </CardHeader>
               <CardContent className="relative z-10">
-                <h4 className="font-semibold mb-3 text-primary">Key Features:</h4>
+                <h4 className="font-semibold mb-3 bg-gradient-to-r from-primary via-secondary to-accent bg-clip-text text-transparent">Key Features:</h4>
                 <ul className="space-y-2">
                   {product.features.map((feature, idx) => (
-                    <li key={idx} className="flex items-center gap-2 text-sm group-hover:translate-x-1 transition-transform duration-300">
-                      <div className="w-1.5 h-1.5 rounded-full bg-primary group-hover:bg-secondary transition-colors duration-300" />
-                      <span className="text-muted-foreground">{feature}</span>
+                    <li key={idx} className="flex items-center gap-2 text-sm group-hover:translate-x-2 transition-all duration-300">
+                      <div className="w-2 h-2 rounded-full bg-gradient-to-r from-primary to-secondary group-hover:from-accent group-hover:to-electric-cyan transition-all duration-300 group-hover:scale-125 shadow-[0_0_10px_hsl(var(--primary)/0.5)]" />
+                      <span className="text-muted-foreground group-hover:text-foreground transition-colors duration-300">{feature}</span>
                     </li>
                   ))}
                 </ul>
