@@ -8,60 +8,60 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
-    --background: 220 40% 6%;
-    --foreground: 0 0% 98%;
+    --background: 0 0% 100%;
+    --foreground: 210 40% 15%;
 
-    --card: 220 35% 10%;
-    --card-foreground: 0 0% 98%;
+    --card: 0 0% 100%;
+    --card-foreground: 210 40% 15%;
 
-    --popover: 220 35% 8%;
-    --popover-foreground: 0 0% 98%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 210 40% 15%;
 
-    --primary: 142 76% 55%;
-    --primary-foreground: 220 40% 6%;
+    --primary: 210 90% 48%;
+    --primary-foreground: 0 0% 100%;
 
-    --secondary: 195 100% 50%;
-    --secondary-foreground: 220 40% 6%;
+    --secondary: 174 62% 47%;
+    --secondary-foreground: 0 0% 100%;
 
-    --muted: 220 30% 15%;
-    --muted-foreground: 0 0% 70%;
+    --muted: 210 15% 95%;
+    --muted-foreground: 210 20% 45%;
 
-    --accent: 280 80% 60%;
-    --accent-foreground: 0 0% 98%;
+    --accent: 158 64% 52%;
+    --accent-foreground: 0 0% 100%;
 
     --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 0 0% 98%;
+    --destructive-foreground: 0 0% 100%;
 
-    --border: 220 30% 20%;
-    --input: 220 30% 20%;
-    --ring: 142 76% 55%;
+    --border: 210 20% 88%;
+    --input: 210 20% 88%;
+    --ring: 210 90% 48%;
 
-    --radius: 1rem;
+    --radius: 0.75rem;
 
-    /* Electric theme colors */
-    --electric-blue: 195 100% 50%;
-    --electric-cyan: 180 100% 45%;
-    --eco-green: 142 76% 55%;
-    --neon-purple: 280 80% 60%;
-    --energy-yellow: 45 100% 60%;
+    /* Professional theme colors */
+    --electric-blue: 210 90% 48%;
+    --electric-cyan: 174 62% 47%;
+    --eco-green: 158 64% 52%;
+    --neon-purple: 210 90% 48%;
+    --energy-yellow: 174 62% 47%;
 
-    /* Custom design tokens */
-    --gradient-dark: linear-gradient(135deg, hsl(220 40% 6%) 0%, hsl(220 35% 10%) 50%, hsl(220 40% 8%) 100%);
-    --gradient-electric: linear-gradient(135deg, hsl(195 100% 50%) 0%, hsl(280 80% 60%) 100%);
-    --gradient-eco: linear-gradient(135deg, hsl(142 76% 55%) 0%, hsl(180 100% 45%) 100%);
-    --gradient-accent: linear-gradient(135deg, hsl(280 80% 60%) 0%, hsl(195 100% 50%) 100%);
-    --gradient-hero: linear-gradient(135deg, hsl(220 40% 6%) 0%, hsl(195 100% 20%) 50%, hsl(142 76% 20%) 100%);
-    --gradient-primary: linear-gradient(135deg, hsl(142 76% 55%) 0%, hsl(180 100% 45%) 50%, hsl(195 100% 50%) 100%);
-    --gradient-secondary: linear-gradient(135deg, hsl(195 100% 50%) 0%, hsl(142 76% 55%) 50%, hsl(280 80% 60%) 100%);
-    --gradient-hover: linear-gradient(135deg, hsl(280 80% 60%) 0%, hsl(195 100% 50%) 50%, hsl(142 76% 55%) 100%);
-    --gradient-card: linear-gradient(135deg, hsl(220 35% 10%) 0%, hsl(195 100% 15%) 50%, hsl(142 76% 15%) 100%);
-    --gradient-card-hover: linear-gradient(135deg, hsl(142 76% 20%) 0%, hsl(195 100% 20%) 50%, hsl(280 80% 20%) 100%);
+    /* Professional design tokens */
+    --gradient-dark: linear-gradient(135deg, hsl(0 0% 100%) 0%, hsl(210 30% 98%) 50%, hsl(174 20% 96%) 100%);
+    --gradient-electric: linear-gradient(135deg, hsl(210 90% 48%) 0%, hsl(174 62% 47%) 100%);
+    --gradient-eco: linear-gradient(135deg, hsl(158 64% 52%) 0%, hsl(174 62% 47%) 100%);
+    --gradient-accent: linear-gradient(135deg, hsl(174 62% 47%) 0%, hsl(210 90% 48%) 100%);
+    --gradient-hero: linear-gradient(135deg, hsl(0 0% 100%) 0%, hsl(210 30% 98%) 50%, hsl(174 30% 96%) 100%);
+    --gradient-primary: linear-gradient(135deg, hsl(210 90% 48%) 0%, hsl(174 62% 47%) 50%, hsl(158 64% 52%) 100%);
+    --gradient-secondary: linear-gradient(135deg, hsl(174 62% 47%) 0%, hsl(158 64% 52%) 50%, hsl(210 90% 48%) 100%);
+    --gradient-hover: linear-gradient(135deg, hsl(158 64% 52%) 0%, hsl(174 62% 47%) 50%, hsl(210 90% 48%) 100%);
+    --gradient-card: linear-gradient(135deg, hsl(0 0% 100%) 0%, hsl(210 20% 98%) 50%, hsl(174 15% 97%) 100%);
+    --gradient-card-hover: linear-gradient(135deg, hsl(210 30% 96%) 0%, hsl(174 25% 95%) 50%, hsl(158 20% 94%) 100%);
     
-    --shadow-glow-green: 0 0 60px hsl(142 76% 55% / 0.4);
-    --shadow-glow-blue: 0 0 60px hsl(195 100% 50% / 0.4);
-    --shadow-glow-purple: 0 0 60px hsl(280 80% 60% / 0.3);
-    --shadow-card: 0 20px 50px -15px hsl(0 0% 0% / 0.7);
-    --shadow-intense: 0 10px 40px hsl(195 100% 50% / 0.3);
+    --shadow-glow-green: 0 0 30px hsl(158 64% 52% / 0.15);
+    --shadow-glow-blue: 0 0 30px hsl(210 90% 48% / 0.15);
+    --shadow-glow-purple: 0 0 30px hsl(210 90% 48% / 0.12);
+    --shadow-card: 0 4px 20px -2px hsl(210 40% 15% / 0.08);
+    --shadow-intense: 0 8px 30px hsl(210 90% 48% / 0.12);
     
     --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     --transition-bounce: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
@@ -75,7 +75,7 @@ All colors MUST be HSL.
 
   body {
     @apply bg-background text-foreground antialiased;
-    background: linear-gradient(135deg, hsl(220 40% 6%) 0%, hsl(220 35% 10%) 30%, hsl(195 100% 8%) 70%, hsl(220 40% 6%) 100%);
+    background: linear-gradient(135deg, hsl(0 0% 100%) 0%, hsl(210 30% 98%) 30%, hsl(174 20% 96%) 70%, hsl(0 0% 100%) 100%);
     background-attachment: fixed;
   }
 
@@ -95,8 +95,8 @@ All colors MUST be HSL.
   }
   
   @keyframes pulse-glow {
-    0%, 100% { box-shadow: 0 0 20px hsl(142 76% 55% / 0.3); }
-    50% { box-shadow: 0 0 40px hsl(142 76% 55% / 0.6); }
+    0%, 100% { box-shadow: 0 0 15px hsl(210 90% 48% / 0.2); }
+    50% { box-shadow: 0 0 25px hsl(210 90% 48% / 0.35); }
   }
   
   @keyframes shimmer {
@@ -124,7 +124,7 @@ All colors MUST be HSL.
   }
   
   .gradient-text {
-    background: linear-gradient(135deg, hsl(142 76% 55%), hsl(195 100% 50%), hsl(280 80% 60%));
+    background: linear-gradient(135deg, hsl(210 90% 48%), hsl(174 62% 47%), hsl(158 64% 52%));
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -138,10 +138,10 @@ All colors MUST be HSL.
   }
   
   .card-hover:hover {
-    transform: translateY(-8px) scale(1.02);
-    box-shadow: 0 20px 60px -15px hsl(var(--primary) / 0.5),
-                0 0 50px hsl(var(--secondary) / 0.3),
-                0 0 80px hsl(var(--accent) / 0.2);
+    transform: translateY(-4px) scale(1.01);
+    box-shadow: 0 12px 40px -10px hsl(var(--primary) / 0.15),
+                0 0 30px hsl(var(--secondary) / 0.1),
+                0 0 40px hsl(var(--accent) / 0.08);
     background: var(--gradient-card-hover);
     background-position: 100% 50%;
   }
