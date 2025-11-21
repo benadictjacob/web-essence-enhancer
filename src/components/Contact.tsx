@@ -54,7 +54,8 @@ export const Contact = () => {
   ];
 
   return (
-    <section id="contact" className="py-24 bg-secondary/20">
+    <section id="contact" className="py-24 relative text-white">
+      <div className="absolute inset-0 bg-[linear-gradient(135deg,hsl(200_30%_15%)_0%,hsl(0_0%_8%)_100%)] -z-10" />
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div 
           className="text-center mb-16 space-y-4"
@@ -64,9 +65,9 @@ export const Contact = () => {
           transition={{ duration: 0.6 }}
         >
           <h2 className="text-4xl sm:text-5xl font-bold">
-            Get in <span className="text-primary">Touch</span>
+            Get in <span className="text-[hsl(180_70%_62%)]">Touch</span>
           </h2>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+          <p className="text-lg text-gray-300 max-w-2xl mx-auto">
             Ready to power your electric vehicle with cutting-edge BMS technology?
             Contact us today for a consultation or quote.
           </p>
