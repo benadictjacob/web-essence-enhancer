@@ -7,7 +7,8 @@ export const Footer = () => {
   };
 
   return (
-    <footer className="border-t border-border bg-background/50 backdrop-blur">
+    <footer className="border-t border-white/20 bg-[hsl(0_0%_8%)] text-white relative">
+      <div className="absolute inset-0 bg-[linear-gradient(135deg,hsl(200_30%_15%)_0%,hsl(0_0%_8%)_100%)] -z-10" />
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
           {/* Brand */}
