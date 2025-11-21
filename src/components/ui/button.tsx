@@ -9,13 +9,13 @@ const buttonVariants = cva(
   {
     variants: {
       variant: {
-        default: "bg-primary text-primary-foreground hover:bg-primary/90 hover:shadow-[0_0_40px_hsl(var(--primary)/0.5)] transition-all duration-300",
+        default: "bg-[linear-gradient(135deg,hsl(var(--ocean-blue)),hsl(var(--teal-green)))] text-primary-foreground hover:shadow-[0_0_40px_hsl(var(--ocean-blue)/0.6)] hover:scale-105 transition-all duration-300",
         destructive: "bg-destructive text-destructive-foreground hover:bg-destructive/90",
-        outline: "border-2 border-primary/50 bg-transparent text-foreground hover:bg-primary/10 hover:border-primary hover:shadow-[0_0_20px_hsl(var(--primary)/0.3)]",
-        secondary: "bg-secondary text-secondary-foreground hover:bg-secondary/80 hover:shadow-[0_0_30px_hsl(var(--secondary)/0.4)]",
-        ghost: "hover:bg-accent/10 hover:text-accent",
-        link: "text-foreground underline-offset-4 hover:underline hover:text-primary",
-        electric: "bg-gradient-to-r from-electric-blue to-neon-purple text-white hover:shadow-[0_0_40px_hsl(var(--electric-blue)/0.5)] transition-all duration-300",
+        outline: "border-2 border-[hsl(var(--ocean-blue))] bg-transparent text-foreground hover:bg-[linear-gradient(135deg,hsl(var(--ocean-blue)/0.1),hsl(var(--aqua-green)/0.1))] hover:border-[hsl(var(--aqua-green))] hover:shadow-[0_0_30px_hsl(var(--ocean-blue)/0.4)]",
+        secondary: "bg-[linear-gradient(135deg,hsl(var(--teal-green)),hsl(var(--aqua-green)))] text-secondary-foreground hover:shadow-[0_0_35px_hsl(var(--teal-green)/0.5)] hover:scale-105",
+        ghost: "hover:bg-[linear-gradient(135deg,hsl(var(--ocean-blue)/0.1),hsl(var(--aqua-green)/0.1))] hover:text-[hsl(var(--ocean-blue))]",
+        link: "text-foreground underline-offset-4 hover:underline hover:text-[hsl(var(--ocean-blue))]",
+        electric: "bg-[linear-gradient(135deg,hsl(var(--ocean-blue)),hsl(var(--aqua-green)),hsl(var(--teal-green)))] bg-[length:200%_200%] animate-[gradient-shift_3s_ease_infinite] text-white hover:shadow-[0_0_45px_hsl(var(--ocean-blue)/0.6),0_0_60px_hsl(var(--aqua-green)/0.4)] hover:scale-105 transition-all duration-300",
       },
       size: {
         default: "h-12 px-6 py-3 text-base",
