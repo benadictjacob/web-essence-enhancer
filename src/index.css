@@ -8,63 +8,66 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 0 0% 10%;
+    --background: 0 0% 98%;
+    --foreground: 0 0% 8%;
 
     --card: 0 0% 100%;
-    --card-foreground: 0 0% 10%;
+    --card-foreground: 0 0% 8%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 0 0% 10%;
+    --popover-foreground: 0 0% 8%;
 
-    --primary: 210 100% 50%;
+    --primary: 200 100% 45%;
     --primary-foreground: 0 0% 100%;
 
-    --secondary: 174 70% 45%;
+    --secondary: 170 65% 40%;
     --secondary-foreground: 0 0% 100%;
 
-    --muted: 210 15% 95%;
-    --muted-foreground: 0 0% 40%;
+    --muted: 200 15% 94%;
+    --muted-foreground: 0 0% 35%;
 
-    --accent: 158 70% 48%;
+    --accent: 180 70% 42%;
     --accent-foreground: 0 0% 100%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 210 15% 92%;
-    --input: 210 15% 92%;
-    --ring: 210 100% 50%;
+    --border: 200 15% 90%;
+    --input: 200 15% 90%;
+    --ring: 200 100% 45%;
 
     --radius: 0.75rem;
 
-    /* White, Black, Blue-Green Blend Theme */
-    --electric-blue: 210 100% 50%;
-    --electric-cyan: 174 70% 45%;
-    --eco-green: 158 70% 48%;
-    --neon-purple: 240 70% 55%;
-    --deep-black: 0 0% 10%;
+    /* White, Black, Blue-Green Theme Colors */
     --pure-white: 0 0% 100%;
-
-    /* Modern gradients with white, black, blue-green blend */
-    --gradient-dark: linear-gradient(135deg, hsl(0 0% 100%) 0%, hsl(210 40% 96%) 50%, hsl(174 30% 94%) 100%);
-    --gradient-electric: linear-gradient(135deg, hsl(210 100% 50%) 0%, hsl(174 70% 45%) 100%);
-    --gradient-eco: linear-gradient(135deg, hsl(158 70% 48%) 0%, hsl(174 70% 45%) 100%);
-    --gradient-accent: linear-gradient(135deg, hsl(174 70% 45%) 0%, hsl(210 100% 50%) 100%);
-    --gradient-hero: linear-gradient(135deg, hsl(0 0% 100%) 0%, hsl(210 30% 97%) 50%, hsl(174 25% 95%) 100%);
-    --gradient-primary: linear-gradient(135deg, hsl(210 100% 50%) 0%, hsl(174 70% 45%) 50%, hsl(158 70% 48%) 100%);
-    --gradient-secondary: linear-gradient(135deg, hsl(174 70% 45%) 0%, hsl(158 70% 48%) 50%, hsl(210 100% 50%) 100%);
-    --gradient-hover: linear-gradient(135deg, hsl(158 70% 48%) 0%, hsl(174 70% 45%) 50%, hsl(210 100% 50%) 100%);
-    --gradient-card: linear-gradient(135deg, hsl(0 0% 100%) 0%, hsl(210 20% 98%) 100%);
-    --gradient-card-hover: linear-gradient(135deg, hsl(210 25% 97%) 0%, hsl(174 20% 96%) 100%);
-    --gradient-dark-overlay: linear-gradient(135deg, hsl(0 0% 10% / 0.95) 0%, hsl(210 40% 15% / 0.9) 100%);
+    --soft-white: 0 0% 98%;
+    --light-gray: 200 10% 95%;
+    --deep-black: 0 0% 8%;
+    --rich-black: 0 0% 12%;
     
-    --shadow-glow-green: 0 0 35px hsl(158 70% 48% / 0.3);
-    --shadow-glow-blue: 0 0 35px hsl(210 100% 50% / 0.3);
-    --shadow-glow-cyan: 0 0 35px hsl(174 70% 45% / 0.25);
-    --shadow-card: 0 4px 20px -2px hsl(0 0% 10% / 0.1);
-    --shadow-intense: 0 10px 40px hsl(210 100% 50% / 0.2);
-    --shadow-hover: 0 15px 50px -10px hsl(210 100% 50% / 0.3), 0 0 40px hsl(174 70% 45% / 0.2);
+    --ocean-blue: 200 100% 45%;
+    --cyan-blue: 190 85% 48%;
+    --teal-green: 170 65% 40%;
+    --aqua-green: 180 70% 42%;
+    --mint-green: 160 60% 45%;
+
+    /* White, Black, Blue-Green Gradients */
+    --gradient-bg: linear-gradient(135deg, hsl(0 0% 100%) 0%, hsl(200 25% 96%) 25%, hsl(180 20% 94%) 50%, hsl(200 25% 96%) 75%, hsl(0 0% 100%) 100%);
+    --gradient-blue-green: linear-gradient(135deg, hsl(200 100% 45%) 0%, hsl(180 70% 42%) 50%, hsl(170 65% 40%) 100%);
+    --gradient-green-blue: linear-gradient(135deg, hsl(170 65% 40%) 0%, hsl(180 70% 42%) 50%, hsl(200 100% 45%) 100%);
+    --gradient-ocean: linear-gradient(135deg, hsl(190 85% 48%) 0%, hsl(180 70% 42%) 100%);
+    --gradient-highlight: linear-gradient(135deg, hsl(180 70% 42% / 0.15) 0%, hsl(200 100% 45% / 0.15) 100%);
+    --gradient-hover: linear-gradient(135deg, hsl(200 100% 45% / 0.1) 0%, hsl(180 70% 42% / 0.1) 50%, hsl(170 65% 40% / 0.1) 100%);
+    --gradient-dark: linear-gradient(135deg, hsl(0 0% 8%) 0%, hsl(200 30% 15%) 100%);
+    
+    /* Shadows with blue-green tints */
+    --shadow-sm: 0 2px 8px hsl(200 20% 20% / 0.08);
+    --shadow-md: 0 4px 16px hsl(200 30% 20% / 0.12);
+    --shadow-lg: 0 8px 24px hsl(200 40% 20% / 0.15);
+    --shadow-glow-blue: 0 0 40px hsl(200 100% 45% / 0.4);
+    --shadow-glow-green: 0 0 40px hsl(170 65% 40% / 0.4);
+    --shadow-glow-cyan: 0 0 40px hsl(180 70% 42% / 0.35);
+    --shadow-hover: 0 12px 32px hsl(200 50% 30% / 0.2), 0 0 40px hsl(180 70% 42% / 0.3);
     
     --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     --transition-bounce: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
@@ -79,7 +82,7 @@ All colors MUST be HSL.
 
   body {
     @apply bg-background text-foreground antialiased;
-    background: linear-gradient(135deg, hsl(0 0% 100%) 0%, hsl(210 30% 97%) 25%, hsl(174 25% 95%) 50%, hsl(210 30% 97%) 75%, hsl(0 0% 100%) 100%);
+    background: var(--gradient-bg);
     background-attachment: fixed;
   }
 
@@ -99,8 +102,8 @@ All colors MUST be HSL.
   }
   
   @keyframes pulse-glow {
-    0%, 100% { box-shadow: 0 0 20px hsl(210 100% 50% / 0.3); }
-    50% { box-shadow: 0 0 40px hsl(210 100% 50% / 0.5), 0 0 60px hsl(174 70% 45% / 0.3); }
+    0%, 100% { box-shadow: 0 0 25px hsl(200 100% 45% / 0.4); }
+    50% { box-shadow: 0 0 45px hsl(200 100% 45% / 0.6), 0 0 60px hsl(180 70% 42% / 0.4); }
   }
   
   @keyframes icon-bounce {
@@ -111,6 +114,11 @@ All colors MUST be HSL.
   @keyframes gradient-shift {
     0%, 100% { background-position: 0% 50%; }
     50% { background-position: 100% 50%; }
+  }
+  
+  @keyframes glow-pulse {
+    0%, 100% { filter: drop-shadow(0 0 10px hsl(200 100% 45% / 0.3)); }
+    50% { filter: drop-shadow(0 0 25px hsl(180 70% 42% / 0.6)); }
   }
   
   @keyframes shimmer {
@@ -138,7 +146,7 @@ All colors MUST be HSL.
   }
   
   .gradient-text {
-    background: linear-gradient(135deg, hsl(210 100% 50%), hsl(174 70% 45%), hsl(158 70% 48%));
+    background: var(--gradient-blue-green);
     background-size: 200% 200%;
     -webkit-background-clip: text;
     background-clip: text;
@@ -147,34 +155,47 @@ All colors MUST be HSL.
   }
   
   .card-hover {
-    transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
-    background: var(--gradient-card);
-    background-size: 200% 200%;
-    background-position: 0% 50%;
+    transition: var(--transition-bounce);
+    background: hsl(var(--card));
     position: relative;
+    border: 1px solid hsl(var(--border));
   }
   
   .card-hover::before {
     content: '';
     position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    background: var(--gradient-hover);
+    opacity: 0;
+    transition: opacity 0.4s ease;
+    z-index: 0;
+  }
+  
+  .card-hover::after {
+    content: '';
+    position: absolute;
     inset: -2px;
     border-radius: inherit;
-    background: var(--gradient-primary);
+    background: var(--gradient-blue-green);
     opacity: 0;
-    transition: opacity 0.5s ease;
+    transition: opacity 0.4s ease;
     z-index: -1;
-    filter: blur(20px);
+    filter: blur(15px);
   }
   
   .card-hover:hover {
-    transform: translateY(-8px) scale(1.02);
+    transform: translateY(-10px) scale(1.02);
     box-shadow: var(--shadow-hover);
-    background: var(--gradient-card-hover);
-    background-position: 100% 50%;
+    border-color: transparent;
   }
   
   .card-hover:hover::before {
-    opacity: 0.6;
+    opacity: 1;
+  }
+  
+  .card-hover:hover::after {
+    opacity: 0.5;
   }
   
   .gradient-border {
@@ -206,20 +227,32 @@ All colors MUST be HSL.
   }
   
   .icon-hover:hover {
-    transform: translateY(-6px) scale(1.1) rotate(5deg);
-    filter: drop-shadow(0 10px 20px hsl(var(--primary) / 0.4));
+    transform: translateY(-8px) scale(1.15) rotate(8deg);
+    animation: glow-pulse 2s ease infinite;
   }
   
   .text-hover {
     transition: var(--transition-smooth);
-    background: linear-gradient(135deg, hsl(var(--foreground)) 0%, hsl(var(--foreground)) 100%);
-    background-size: 200% 200%;
-    -webkit-background-clip: text;
-    background-clip: text;
+    position: relative;
+  }
+  
+  .text-hover::before {
+    content: '';
+    position: absolute;
+    inset: -4px;
+    background: var(--gradient-highlight);
+    border-radius: 6px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    z-index: -1;
+  }
+  
+  .text-hover:hover::before {
+    opacity: 1;
   }
   
   .text-hover:hover {
-    background: var(--gradient-primary);
+    background: var(--gradient-blue-green);
     background-size: 200% 200%;
     -webkit-background-clip: text;
     background-clip: text;
@@ -227,51 +260,59 @@ All colors MUST be HSL.
     animation: gradient-shift 2s ease infinite;
   }
   
-  .button-hover {
+  .tab-hover {
     position: relative;
-    overflow: hidden;
+    transition: var(--transition-smooth);
+    background: hsl(var(--background));
+    padding: 0.75rem 1.5rem;
+    border-radius: 0.5rem;
+    border: 1px solid hsl(var(--border));
+  }
+  
+  .tab-hover::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: var(--gradient-blue-green);
+    border-radius: inherit;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+    z-index: -1;
+  }
+  
+  .tab-hover:hover {
+    color: hsl(var(--pure-white));
+    border-color: transparent;
+    box-shadow: var(--shadow-glow-cyan);
+    transform: translateY(-3px);
+  }
+  
+  .tab-hover:hover::before {
+    opacity: 1;
+  }
+  
+  .highlight-hover {
+    position: relative;
     transition: var(--transition-smooth);
   }
   
-  .button-hover::before {
+  .highlight-hover::before {
     content: '';
     position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 0;
-    height: 0;
-    border-radius: 50%;
-    background: hsl(var(--primary-foreground) / 0.2);
-    transform: translate(-50%, -50%);
-    transition: width 0.6s, height 0.6s;
+    inset: -6px;
+    background: var(--gradient-green-blue);
+    border-radius: 8px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    z-index: -1;
+    filter: blur(12px);
   }
   
-  .button-hover:hover::before {
-    width: 300px;
-    height: 300px;
+  .highlight-hover:hover::before {
+    opacity: 0.6;
   }
   
-  .link-hover {
-    position: relative;
-    transition: var(--transition-smooth);
-  }
-  
-  .link-hover::after {
-    content: '';
-    position: absolute;
-    bottom: -2px;
-    left: 0;
-    width: 0;
-    height: 2px;
-    background: var(--gradient-primary);
-    transition: width 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
-  }
-  
-  .link-hover:hover::after {
-    width: 100%;
-  }
-  
-  .link-hover:hover {
-    color: hsl(var(--primary));
+  .highlight-hover:hover {
+    transform: scale(1.05);
   }
 }
