@@ -16,7 +16,7 @@ export const Partners = () => {
   ];
 
   return (
-    <section className="py-20 border-y border-border">
+    <section className="py-20 border-y border-border bg-white">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         {/* Partners Section */}
         <div className="text-center mb-16">

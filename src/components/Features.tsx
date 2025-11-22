@@ -43,7 +43,7 @@ export const Features = () => {
   ];
 
   return (
-    <section className="py-24">
+    <section className="py-24 bg-white">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div 
           className="text-center mb-16 space-y-4"
@@ -52,10 +52,10 @@ export const Features = () => {
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
         >
-          <h2 className="text-4xl sm:text-5xl font-bold">
+          <h2 className="text-4xl sm:text-5xl font-bold text-black">
             Exploring the Power of Shade BMS
           </h2>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+          <p className="text-lg text-gray-700 max-w-2xl mx-auto">
             Our Battery Management System combines cutting-edge technology with robust
             engineering to deliver unmatched performance and reliability
           </p>

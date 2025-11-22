@@ -31,7 +31,7 @@ export const About = () => {
   ];
 
   return (
-    <section id="about" className="py-24">
+    <section id="about" className="py-24 bg-white">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div 
           className="max-w-3xl mx-auto text-center mb-16 space-y-6"
@@ -40,16 +40,16 @@ export const About = () => {
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
         >
-          <h2 className="text-4xl sm:text-5xl font-bold">
+          <h2 className="text-4xl sm:text-5xl font-bold text-black">
             About <span className="text-primary">Shade Energy</span>
           </h2>
-          <p className="text-lg text-muted-foreground leading-relaxed">
+          <p className="text-lg text-gray-700 leading-relaxed">
             Founded with a vision to revolutionize electric mobility, Shade Energy is at
             the forefront of Battery Management System technology. We combine deep
             technical expertise with innovative thinking to deliver solutions that power
             the future of transportation.
           </p>
-          <p className="text-lg text-muted-foreground leading-relaxed">
+          <p className="text-lg text-gray-700 leading-relaxed">
             Our BMS solutions are trusted by leading EV manufacturers and have been
             deployed in thousands of vehicles across India, ensuring safe and efficient
             operation in diverse conditions.
@@ -73,7 +73,7 @@ export const About = () => {
                   <value.icon className="w-7 h-7 text-primary-foreground" />
                 </div>
                 <h3 className="text-2xl font-bold bg-gradient-to-r from-foreground to-foreground group-hover:from-primary group-hover:via-secondary group-hover:to-accent bg-clip-text group-hover:text-transparent transition-all duration-500">{value.title}</h3>
-                <p className="text-muted-foreground leading-relaxed group-hover:text-foreground/80 transition-colors duration-500">
+                <p className="text-gray-700 leading-relaxed group-hover:text-foreground/80 transition-colors duration-500">
                   {value.description}
                 </p>
               </CardContent>
@@ -103,7 +103,7 @@ export const About = () => {
                   className="group"
                 >
                   <p className="text-4xl font-bold bg-gradient-to-r from-primary via-secondary to-accent bg-clip-text text-transparent group-hover:from-accent group-hover:to-primary transition-all duration-500 mb-2">500+</p>
-                  <p className="text-sm text-muted-foreground">Vehicles Deployed</p>
+                  <p className="text-sm text-gray-600">Vehicles Deployed</p>
                 </motion.div>
                 <motion.div
                   initial={{ opacity: 0, scale: 0.8 }}
@@ -113,7 +113,7 @@ export const About = () => {
                   className="group"
                 >
                   <p className="text-4xl font-bold bg-gradient-to-r from-secondary via-accent to-primary bg-clip-text text-transparent group-hover:from-primary group-hover:to-secondary transition-all duration-500 mb-2">99.8%</p>
-                  <p className="text-sm text-muted-foreground">System Reliability</p>
+                  <p className="text-sm text-gray-600">System Reliability</p>
                 </motion.div>
                 <motion.div
                   initial={{ opacity: 0, scale: 0.8 }}
@@ -123,7 +123,7 @@ export const About = () => {
                   className="group"
                 >
                   <p className="text-4xl font-bold bg-gradient-to-r from-accent via-primary to-secondary bg-clip-text text-transparent group-hover:from-secondary group-hover:to-accent transition-all duration-500 mb-2">24/7</p>
-                  <p className="text-sm text-muted-foreground">Technical Support</p>
+                  <p className="text-sm text-gray-600">Technical Support</p>
                 </motion.div>
               </div>
             </CardContent>
