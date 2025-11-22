@@ -70,7 +70,7 @@ export const Products = () => {
 
   return (
     <section id="products" className="py-24 relative">
-      <div className="absolute inset-0 bg-[linear-gradient(135deg,hsl(200_40%_85%)_0%,hsl(180_50%_75%)_50%,hsl(170_45%_70%)_100%)] -z-10" />
+      <div className="absolute inset-0 bg-[linear-gradient(135deg,hsl(160_40%_92%)_0%,hsl(160_50%_85%)_50%,hsl(160_45%_80%)_100%)] -z-10" />
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div 
           className="text-center mb-16 space-y-4"
