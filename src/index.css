@@ -8,72 +8,58 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
-    --background: 0 0% 98%;
-    --foreground: 160 70% 25%;
+    --background: 220 40% 6%;
+    --foreground: 0 0% 98%;
 
-    --card: 0 0% 100%;
-    --card-foreground: 160 70% 25%;
+    --card: 220 35% 10%;
+    --card-foreground: 0 0% 98%;
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 160 70% 25%;
+    --popover: 220 35% 8%;
+    --popover-foreground: 0 0% 98%;
 
-    --primary: 160 65% 35%;
-    --primary-foreground: 0 0% 100%;
+    --primary: 142 76% 55%;
+    --primary-foreground: 220 40% 6%;
 
-    --secondary: 160 55% 45%;
-    --secondary-foreground: 0 0% 100%;
+    --secondary: 195 100% 50%;
+    --secondary-foreground: 220 40% 6%;
 
-    --muted: 160 20% 94%;
-    --muted-foreground: 160 50% 30%;
+    --muted: 220 30% 15%;
+    --muted-foreground: 0 0% 70%;
 
-    --accent: 160 70% 40%;
-    --accent-foreground: 0 0% 100%;
+    --accent: 280 80% 60%;
+    --accent-foreground: 0 0% 98%;
 
     --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 0 0% 100%;
+    --destructive-foreground: 0 0% 98%;
 
-    --border: 160 15% 90%;
-    --input: 160 15% 90%;
-    --ring: 160 65% 35%;
+    --border: 220 30% 20%;
+    --input: 220 30% 20%;
+    --ring: 142 76% 55%;
 
-    --radius: 0.75rem;
+    --radius: 1rem;
 
-    /* White and Green Theme Colors */
-    --pure-white: 0 0% 100%;
-    --soft-white: 0 0% 98%;
-    --light-gray: 0 0% 95%;
-    --light-green: 160 40% 92%;
+    /* Electric theme colors */
+    --electric-blue: 195 100% 50%;
+    --electric-cyan: 180 100% 45%;
+    --eco-green: 142 76% 55%;
+    --neon-purple: 280 80% 60%;
+    --energy-yellow: 45 100% 60%;
+
+    /* Custom design tokens */
+    --gradient-dark: linear-gradient(135deg, hsl(220 40% 6%) 0%, hsl(220 35% 10%) 50%, hsl(220 40% 8%) 100%);
+    --gradient-electric: linear-gradient(135deg, hsl(195 100% 50%) 0%, hsl(280 80% 60%) 100%);
+    --gradient-eco: linear-gradient(135deg, hsl(142 76% 55%) 0%, hsl(180 100% 45%) 100%);
+    --gradient-accent: linear-gradient(135deg, hsl(280 80% 60%) 0%, hsl(195 100% 50%) 100%);
+    --gradient-hero: linear-gradient(135deg, hsl(220 40% 6%) 0%, hsl(195 100% 20%) 50%, hsl(142 76% 20%) 100%);
     
-    --forest-green: 160 65% 35%;
-    --emerald-green: 160 55% 45%;
-    --sage-green: 160 45% 55%;
-    --mint-green: 160 50% 65%;
-    --pale-green: 160 40% 85%;
-
-    /* Section-specific backgrounds */
-    --bg-white-section: hsl(0 0% 100%);
-    --bg-green-light-section: linear-gradient(135deg, hsl(160 40% 92%) 0%, hsl(160 50% 85%) 50%, hsl(160 45% 80%) 100%);
-    --bg-green-section: linear-gradient(135deg, hsl(160 55% 45%) 0%, hsl(160 65% 35%) 100%);
-
-    /* White and Green Gradients */
-    --gradient-bg: linear-gradient(to bottom, hsl(0 0% 100%) 0%, hsl(160 40% 90%) 40%, hsl(160 50% 75%) 60%, hsl(160 60% 55%) 100%);
-    --gradient-green: linear-gradient(135deg, hsl(160 65% 35%) 0%, hsl(160 55% 45%) 50%, hsl(160 50% 55%) 100%);
-    --gradient-green-light: linear-gradient(135deg, hsl(160 50% 65%) 0%, hsl(160 45% 75%) 50%, hsl(160 40% 85%) 100%);
-    --gradient-emerald: linear-gradient(135deg, hsl(160 65% 35%) 0%, hsl(160 55% 45%) 100%);
-    --gradient-highlight: linear-gradient(135deg, hsl(160 50% 65% / 0.15) 0%, hsl(160 65% 35% / 0.15) 100%);
-    --gradient-hover: linear-gradient(135deg, hsl(160 65% 35% / 0.1) 0%, hsl(160 55% 45% / 0.1) 50%, hsl(160 45% 55% / 0.1) 100%);
-    
-    /* Shadows with green tints */
-    --shadow-sm: 0 2px 8px hsl(160 20% 20% / 0.08);
-    --shadow-md: 0 4px 16px hsl(160 30% 20% / 0.12);
-    --shadow-lg: 0 8px 24px hsl(160 40% 20% / 0.15);
-    --shadow-glow-green: 0 0 40px hsl(160 65% 35% / 0.4);
-    --shadow-glow-emerald: 0 0 40px hsl(160 55% 45% / 0.35);
-    --shadow-hover: 0 12px 32px hsl(160 50% 30% / 0.2), 0 0 40px hsl(160 55% 45% / 0.3);
+    --shadow-glow-green: 0 0 60px hsl(142 76% 55% / 0.4);
+    --shadow-glow-blue: 0 0 60px hsl(195 100% 50% / 0.4);
+    --shadow-glow-purple: 0 0 60px hsl(280 80% 60% / 0.3);
+    --shadow-card: 0 20px 50px -15px hsl(0 0% 0% / 0.7);
+    --shadow-intense: 0 10px 40px hsl(195 100% 50% / 0.3);
     
     --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-    --transition-bounce: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
-    --transition-spring: all 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
+    --transition-bounce: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
   }
 }
 
@@ -83,8 +69,9 @@ All colors MUST be HSL.
   }
 
   body {
-    @apply bg-white text-foreground antialiased;
-    min-height: 100vh;
+    @apply bg-background text-foreground antialiased;
+    background: linear-gradient(135deg, hsl(220 40% 6%) 0%, hsl(220 35% 10%) 30%, hsl(195 100% 8%) 70%, hsl(220 40% 6%) 100%);
+    background-attachment: fixed;
   }
 
   h1, h2, h3, h4, h5, h6 {
@@ -103,39 +90,13 @@ All colors MUST be HSL.
   }
   
   @keyframes pulse-glow {
-    0%, 100% { box-shadow: 0 0 25px hsl(160 65% 35% / 0.4); }
-    50% { box-shadow: 0 0 45px hsl(160 65% 35% / 0.6), 0 0 60px hsl(160 55% 45% / 0.4); }
-  }
-  
-  @keyframes icon-bounce {
-    0%, 100% { transform: translateY(0) scale(1); }
-    50% { transform: translateY(-8px) scale(1.05); }
-  }
-  
-  @keyframes gradient-shift {
-    0%, 100% { background-position: 0% 50%; }
-    50% { background-position: 100% 50%; }
-  }
-  
-  @keyframes glow-pulse {
-    0%, 100% { filter: drop-shadow(0 0 10px hsl(160 65% 35% / 0.3)); }
-    50% { filter: drop-shadow(0 0 25px hsl(160 55% 45% / 0.6)); }
+    0%, 100% { box-shadow: 0 0 20px hsl(142 76% 55% / 0.3); }
+    50% { box-shadow: 0 0 40px hsl(142 76% 55% / 0.6); }
   }
   
   @keyframes shimmer {
     0% { background-position: -1000px 0; }
     100% { background-position: 1000px 0; }
-  }
-  
-  @keyframes slide-up {
-    from {
-      opacity: 0;
-      transform: translateY(30px);
-    }
-    to {
-      opacity: 1;
-      transform: translateY(0);
-    }
   }
   
   .animate-float {
@@ -147,173 +108,9 @@ All colors MUST be HSL.
   }
   
   .gradient-text {
-    background: var(--gradient-green);
-    background-size: 200% 200%;
+    background: linear-gradient(135deg, hsl(142 76% 55%), hsl(195 100% 50%), hsl(280 80% 60%));
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
-    animation: gradient-shift 3s ease infinite;
-  }
-  
-  .card-hover {
-    transition: var(--transition-bounce);
-    background: hsl(var(--card));
-    position: relative;
-    border: 1px solid hsl(var(--border));
-  }
-  
-  .card-hover::before {
-    content: '';
-    position: absolute;
-    inset: 0;
-    border-radius: inherit;
-    background: var(--gradient-hover);
-    opacity: 0;
-    transition: opacity 0.4s ease;
-    z-index: 0;
-  }
-  
-  .card-hover::after {
-    content: '';
-    position: absolute;
-    inset: -2px;
-    border-radius: inherit;
-    background: var(--gradient-green);
-    opacity: 0;
-    transition: opacity 0.4s ease;
-    z-index: -1;
-    filter: blur(15px);
-  }
-  
-  .card-hover:hover {
-    transform: translateY(-10px) scale(1.02);
-    box-shadow: var(--shadow-hover);
-    border-color: transparent;
-  }
-  
-  .card-hover:hover::before {
-    opacity: 1;
-  }
-  
-  .card-hover:hover::after {
-    opacity: 0.5;
-  }
-  
-  .gradient-border {
-    position: relative;
-    border: 2px solid transparent;
-    background-clip: padding-box;
-  }
-  
-  .gradient-border::before {
-    content: '';
-    position: absolute;
-    inset: -2px;
-    border-radius: inherit;
-    padding: 2px;
-    background: var(--gradient-primary);
-    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
-    -webkit-mask-composite: xor;
-    mask-composite: exclude;
-    opacity: 0;
-    transition: opacity 0.3s ease;
-  }
-  
-  .gradient-border:hover::before {
-    opacity: 1;
-  }
-  
-  .icon-hover {
-    transition: var(--transition-spring);
-  }
-  
-  .icon-hover:hover {
-    transform: translateY(-8px) scale(1.15) rotate(8deg);
-    animation: glow-pulse 2s ease infinite;
-  }
-  
-  .text-hover {
-    transition: var(--transition-smooth);
-    position: relative;
-  }
-  
-  .text-hover::before {
-    content: '';
-    position: absolute;
-    inset: -4px;
-    background: var(--gradient-highlight);
-    border-radius: 6px;
-    opacity: 0;
-    transition: opacity 0.3s ease;
-    z-index: -1;
-  }
-  
-  .text-hover:hover::before {
-    opacity: 1;
-  }
-  
-  .text-hover:hover {
-    background: var(--gradient-green);
-    background-size: 200% 200%;
-    -webkit-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
-    animation: gradient-shift 2s ease infinite;
-  }
-  
-  .tab-hover {
-    position: relative;
-    transition: var(--transition-smooth);
-    background: hsl(var(--background));
-    padding: 0.75rem 1.5rem;
-    border-radius: 0.5rem;
-    border: 1px solid hsl(var(--border));
-  }
-  
-  .tab-hover::before {
-    content: '';
-    position: absolute;
-    inset: 0;
-    background: var(--gradient-green);
-    border-radius: inherit;
-    opacity: 0;
-    transition: opacity 0.4s ease;
-    z-index: -1;
-  }
-  
-  .tab-hover:hover {
-    color: hsl(var(--pure-white));
-    border-color: transparent;
-    box-shadow: var(--shadow-glow-green);
-    transform: translateY(-3px);
-  }
-  
-  .tab-hover:hover::before {
-    opacity: 1;
-  }
-  
-  .highlight-hover {
-    position: relative;
-    transition: var(--transition-smooth);
-  }
-  
-  .highlight-hover::before {
-    content: '';
-    position: absolute;
-    inset: -6px;
-    background: var(--gradient-green-light);
-    border-radius: 8px;
-    opacity: 0;
-    transition: opacity 0.3s ease;
-    z-index: -1;
-    filter: blur(12px);
-  }
-  
-  .highlight-hover:hover::before {
-    opacity: 0.6;
-  }
-  
-  .highlight-hover:hover {
-    transform: scale(1.05);
   }
 }

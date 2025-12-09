@@ -43,23 +43,17 @@ export const Features = () => {
   ];
 
   return (
-    <section className="py-24 bg-white">
+    <section className="py-24">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <motion.div 
-          className="text-center mb-16 space-y-4"
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
-        >
-          <h2 className="text-4xl sm:text-5xl font-bold text-black">
+        <div className="text-center mb-16 space-y-4">
+          <h2 className="text-4xl sm:text-5xl font-bold">
             Exploring the Power of Shade BMS
           </h2>
-          <p className="text-lg text-gray-700 max-w-2xl mx-auto">
+          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
             Our Battery Management System combines cutting-edge technology with robust
             engineering to deliver unmatched performance and reliability
           </p>
-        </motion.div>
+        </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {features.map((feature, index) => (
@@ -71,13 +65,14 @@ export const Features = () => {
               transition={{ duration: 0.5, delay: index * 0.1 }}
             >
               <Card
-              className="card-hover group border-0 h-full relative overflow-hidden"
+              key={index}
+              className="group hover:border-primary/50 transition-all duration-300 hover:shadow-[0_0_30px_hsl(var(--primary)/0.1)] bg-card/50 backdrop-blur"
             >
-              <CardContent className="p-8 space-y-4 relative z-10">
-                <div className="w-14 h-14 rounded-lg bg-gradient-to-br from-primary via-secondary to-accent flex items-center justify-center transition-all duration-500 group-hover:scale-110 group-hover:rotate-12 group-hover:from-accent group-hover:via-primary group-hover:to-secondary shadow-lg group-hover:shadow-[0_0_30px_hsl(var(--primary)/0.5)]">
-                  <feature.icon className="w-7 h-7 text-primary-foreground" />
+              <CardContent className="p-8 space-y-4">
+                <div className="w-14 h-14 rounded-lg bg-primary/10 flex items-center justify-center group-hover:bg-primary/20 transition-colors duration-300">
+                  <feature.icon className="w-7 h-7 text-primary" />
                 </div>
-                <h3 className="text-xl font-bold bg-gradient-to-r from-foreground to-foreground group-hover:from-primary group-hover:via-secondary group-hover:to-accent bg-clip-text group-hover:text-transparent transition-all duration-500">{feature.title}</h3>
+                <h3 className="text-xl font-bold">{feature.title}</h3>
                 <p className="text-muted-foreground leading-relaxed">
                   {feature.description}
                 </p>

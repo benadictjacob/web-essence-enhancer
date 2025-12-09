@@ -69,16 +69,9 @@ export const Products = () => {
   };
 
   return (
-    <section id="products" className="py-24 relative bg-[hsl(160_40%_92%)]">
-      <div className="absolute inset-0 bg-[linear-gradient(to_bottom,hsl(0_0%_100%)_0%,hsl(160_40%_92%)_50%,hsl(160_50%_85%)_100%)] -z-10" />
+    <section id="products" className="py-24 bg-secondary/20">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <motion.div 
-          className="text-center mb-16 space-y-4"
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
-        >
+        <div className="text-center mb-16 space-y-4">
           <h2 className="text-4xl sm:text-5xl font-bold">
             Products & <span className="text-primary">Solutions</span>
           </h2>
@@ -86,7 +79,7 @@ export const Products = () => {
             Tailored Battery Management Systems for every electric vehicle segment,
             from two-wheelers to heavy commercial vehicles
           </p>
-        </motion.div>
+        </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-12">
           {products.map((product, index) => (
@@ -96,69 +89,63 @@ export const Products = () => {
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
+              whileHover={{ scale: 1.02 }}
             >
               <Card
-              className="card-hover group border-0 h-full relative overflow-hidden"
+              className="group hover:border-primary/50 transition-all duration-300 hover:shadow-[0_0_30px_hsl(var(--primary)/0.1)] bg-card"
             >
-              <CardHeader className="relative z-10">
+              <CardHeader>
                 <div className="flex items-center gap-4 mb-4">
-                  <div className="w-16 h-16 rounded-xl bg-gradient-to-br from-primary via-secondary to-accent flex items-center justify-center transition-all duration-500 group-hover:scale-110 group-hover:rotate-12 group-hover:from-accent group-hover:via-electric-cyan group-hover:to-neon-purple shadow-lg group-hover:shadow-[0_0_40px_hsl(var(--primary)/0.6)]">
-                    <product.icon className="w-8 h-8 text-primary-foreground" />
+                  <div className="w-16 h-16 rounded-xl bg-primary/10 flex items-center justify-center group-hover:bg-primary/20 transition-colors duration-300">
+                    <product.icon className="w-8 h-8 text-primary" />
                   </div>
                   <div>
-                    <p className="text-xs font-semibold uppercase tracking-wider mb-1 bg-gradient-to-r from-primary via-secondary to-accent bg-clip-text text-transparent">
+                    <p className="text-xs text-primary font-semibold uppercase tracking-wider mb-1">
                       {product.category}
                     </p>
                     <CardTitle className="text-xl">{product.title}</CardTitle>
                   </div>
                 </div>
-                <div className="grid grid-cols-3 gap-4 pt-4 border-t border-primary/30 group-hover:border-transparent group-hover:bg-gradient-to-r group-hover:from-primary/10 group-hover:via-secondary/10 group-hover:to-accent/10 rounded-lg transition-all duration-500 p-2 -m-2">
+                <div className="grid grid-cols-3 gap-4 pt-4 border-t border-border">
                   <div>
                     <p className="text-xs text-muted-foreground mb-1">Voltage</p>
-                    <p className="font-semibold text-foreground">{product.voltage}</p>
+                    <p className="text-sm font-semibold">{product.voltage}</p>
                   </div>
                   <div>
-                    <p className="text-xs text-muted-foreground mb-1">Cells</p>
-                    <p className="font-semibold text-foreground">{product.cells}</p>
+                    <p className="text-xs text-muted-foreground mb-1">Configuration</p>
+                    <p className="text-sm font-semibold">{product.cells}</p>
                   </div>
                   <div>
                     <p className="text-xs text-muted-foreground mb-1">Current</p>
-                    <p className="font-semibold text-foreground">{product.current}</p>
+                    <p className="text-sm font-semibold">{product.current}</p>
                   </div>
                 </div>
               </CardHeader>
-              <CardContent className="relative z-10">
-                <h4 className="font-semibold mb-3 bg-gradient-to-r from-primary via-secondary to-accent bg-clip-text text-transparent">Key Features:</h4>
-                <ul className="space-y-2">
-                  {product.features.map((feature, idx) => (
-                    <li key={idx} className="flex items-center gap-2 text-sm group-hover:translate-x-2 transition-all duration-300">
-                      <div className="w-2 h-2 rounded-full bg-gradient-to-r from-primary to-secondary group-hover:from-accent group-hover:to-electric-cyan transition-all duration-300 group-hover:scale-125 shadow-[0_0_10px_hsl(var(--primary)/0.5)]" />
-                      <span className="text-muted-foreground group-hover:text-foreground transition-colors duration-300">{feature}</span>
-                    </li>
-                  ))}
-                </ul>
+              <CardContent>
+                <div className="space-y-2">
+                  <p className="text-sm font-semibold text-muted-foreground mb-3">
+                    Key Features:
+                  </p>
+                  <ul className="space-y-2">
+                    {product.features.map((feature, idx) => (
+                      <li key={idx} className="flex items-center text-sm text-muted-foreground">
+                        <span className="w-1.5 h-1.5 rounded-full bg-primary mr-3" />
+                        {feature}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
               </CardContent>
             </Card>
             </motion.div>
           ))}
         </div>
 
-        <motion.div 
-          className="text-center"
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
-        >
-          <Button
-            onClick={scrollToContact}
-            size="lg"
-            variant="electric"
-            className="px-12"
-          >
+        <div className="text-center">
+          <Button size="lg" onClick={scrollToContact}>
             Request a Quote
           </Button>
-        </motion.div>
+        </div>
       </div>
     </section>
   );

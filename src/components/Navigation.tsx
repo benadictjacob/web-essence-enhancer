@@ -17,9 +17,8 @@ export const Navigation = () => {
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
           <div className="flex-shrink-0">
-            <h1 className="text-2xl font-bold">
-              <span className="bg-gradient-to-r from-primary via-secondary to-accent bg-clip-text text-transparent">Shade</span>{" "}
-              <span className="text-foreground">Energy</span>
+            <h1 className="text-2xl font-bold text-foreground">
+              Shade <span className="text-primary">Energy</span>
             </h1>
           </div>
 
@@ -41,7 +40,7 @@ export const Navigation = () => {
 
           {/* CTA Button - Desktop */}
           <div className="hidden md:block">
-            <Button variant="electric" onClick={() => scrollToSection("contact")}>
+            <Button onClick={() => scrollToSection("contact")}>
               Get Started
             </Button>
           </div>
@@ -92,7 +91,6 @@ export const Navigation = () => {
               Contact
             </Button>
             <Button
-              variant="electric"
               className="w-full mt-4"
               onClick={() => scrollToSection("contact")}
             >

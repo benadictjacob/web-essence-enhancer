@@ -7,15 +7,13 @@ export const Footer = () => {
   };
 
   return (
-    <footer className="border-t border-white/20 bg-[hsl(160_65%_35%)] text-white relative">
-      <div className="absolute inset-0 bg-[linear-gradient(135deg,hsl(160_55%_45%)_0%,hsl(160_65%_35%)_100%)] -z-10" />
+    <footer className="border-t border-border bg-background/50 backdrop-blur">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
           {/* Brand */}
           <div className="space-y-4">
             <h3 className="text-2xl font-bold">
-              <span className="bg-gradient-to-r from-primary via-secondary to-accent bg-clip-text text-transparent">Shade</span>{" "}
-              <span className="text-foreground">Energy</span>
+              Shade <span className="text-primary">Energy</span>
             </h3>
             <p className="text-sm text-muted-foreground">
               Powering the future of electric mobility with cutting-edge Battery Management
@@ -30,7 +28,7 @@ export const Footer = () => {
               <li>
                 <button
                   onClick={() => scrollToSection("home")}
-                  className="text-muted-foreground hover:bg-gradient-to-r hover:from-primary hover:via-secondary hover:to-accent hover:bg-clip-text hover:text-transparent transition-all duration-300"
+                  className="text-muted-foreground hover:text-primary transition-colors"
                 >
                   Home
                 </button>
@@ -38,7 +36,7 @@ export const Footer = () => {
               <li>
                 <button
                   onClick={() => scrollToSection("products")}
-                  className="text-muted-foreground hover:bg-gradient-to-r hover:from-primary hover:via-secondary hover:to-accent hover:bg-clip-text hover:text-transparent transition-all duration-300"
+                  className="text-muted-foreground hover:text-primary transition-colors"
                 >
                   Products
                 </button>
@@ -46,7 +44,7 @@ export const Footer = () => {
               <li>
                 <button
                   onClick={() => scrollToSection("about")}
-                  className="text-muted-foreground hover:bg-gradient-to-r hover:from-primary hover:via-secondary hover:to-accent hover:bg-clip-text hover:text-transparent transition-all duration-300"
+                  className="text-muted-foreground hover:text-primary transition-colors"
                 >
                   About Us
                 </button>
@@ -54,7 +52,7 @@ export const Footer = () => {
               <li>
                 <button
                   onClick={() => scrollToSection("contact")}
-                  className="text-muted-foreground hover:bg-gradient-to-r hover:from-primary hover:via-secondary hover:to-accent hover:bg-clip-text hover:text-transparent transition-all duration-300"
+                  className="text-muted-foreground hover:text-primary transition-colors"
                 >
                   Contact
                 </button>
@@ -84,21 +82,21 @@ export const Footer = () => {
             <div className="flex gap-4 mt-4">
               <a
                 href="#"
-                className="w-10 h-10 rounded-full bg-gradient-to-br from-primary/20 via-secondary/20 to-accent/20 flex items-center justify-center hover:from-primary hover:via-secondary hover:to-accent transition-all duration-500 hover:scale-110 hover:shadow-[0_0_20px_hsl(var(--primary)/0.5)]"
+                className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center hover:bg-primary/20 transition-colors"
               >
-                <Linkedin className="w-5 h-5 text-primary hover:text-primary-foreground transition-colors" />
+                <Linkedin className="w-5 h-5 text-primary" />
               </a>
               <a
                 href="#"
-                className="w-10 h-10 rounded-full bg-gradient-to-br from-primary/20 via-secondary/20 to-accent/20 flex items-center justify-center hover:from-secondary hover:via-accent hover:to-primary transition-all duration-500 hover:scale-110 hover:shadow-[0_0_20px_hsl(var(--secondary)/0.5)]"
+                className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center hover:bg-primary/20 transition-colors"
               >
-                <Twitter className="w-5 h-5 text-secondary hover:text-primary-foreground transition-colors" />
+                <Twitter className="w-5 h-5 text-primary" />
               </a>
               <a
                 href="mailto:info@shadeenergy.in"
-                className="w-10 h-10 rounded-full bg-gradient-to-br from-primary/20 via-secondary/20 to-accent/20 flex items-center justify-center hover:from-accent hover:via-primary hover:to-secondary transition-all duration-500 hover:scale-110 hover:shadow-[0_0_20px_hsl(var(--accent)/0.5)]"
+                className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center hover:bg-primary/20 transition-colors"
               >
-                <Mail className="w-5 h-5 text-accent hover:text-primary-foreground transition-colors" />
+                <Mail className="w-5 h-5 text-primary" />
               </a>
             </div>
           </div>
